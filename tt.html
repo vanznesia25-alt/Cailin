@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Biar gw tebak tt&tb lu!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f0f0f0;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>GW BISA TEBAK TT&TB LU😈</h1>
+  <input type="text" id="name" placeholder="Masukkan nama">
+  <button onclick="generate()">Generate</button>
+
+  <div id="result"></div>
+
+  <script>
+    function generate() {
+      const name = document.getElementById("name").value.trim();
+      if(name === "") {
+        alert("Masukkan nama dulu!");
+        return;
+      }
+
+      // Random TB antara 140 - 200 cm
+      const tb = Math.floor(Math.random() * (200 - 1 + 1)) + 1;
+      // Random BB antara 40 - 100 kg
+      const bb = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+
+      document.getElementById("result").innerHTML = 
+        name + " memiliki TB: " + tb + " cm & BB: " + bb + " kg";
+    }
+  </script>
+</body>
+</html>
