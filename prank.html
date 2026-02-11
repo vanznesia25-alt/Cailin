@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Prank Web</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding-top: 100px;
+      transition: transform 0.5s;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Oops! Something went wrong...</h1>
+  <button onclick="prank()">Klik aja, jangan takut!</button>
+
+  <script>
+    function prank() {
+      // Alert prank
+      for (let i = 0; i < 3; i++) {
+        alert("jgn takut ini cuma gimmick!");
+      }
+
+      // Putar layar
+      document.body.style.transform = "rotate(180deg)";
+      
+      // Ubah warna background acak
+      setInterval(() => {
+        document.body.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        document.body.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+      }, 500);
+    }
+  </script>
+</body>
+</html>
